@@ -29,6 +29,7 @@ public class DoingButton extends ToDoButton{
         return startedDate;
     }
 
+    //Sobreescritura de metodos
     @Override
     public Button next() {
         DoneButton db = Clone.doneButton(this);

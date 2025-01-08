@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 
 import java.time.LocalDateTime;
 
+//Herencia
 public class DoneButton extends DoingButton{
     public DoneButton() {
         super();

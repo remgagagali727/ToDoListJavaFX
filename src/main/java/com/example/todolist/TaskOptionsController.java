@@ -26,9 +26,12 @@ public class TaskOptionsController {
         Slider slider = ((Slider) container.getChildren().get(2));
         TextField textField = ((TextField) container.getChildren().get(4));
         String newName = textField.getText();
+        //Exception
+        if(newName.length() >= 30) throw new RuntimeException("La longitud del nombre de la tarea es muy larga");
         ToDoButton currButton = HelloController.toDoList.get(HelloController.idToDo);
         currButton.setPriority(slider.getValue());
         currButton.adjustColor();
+        //UpCAST
         Util.setBackground(currButton, currButton.getColor());
         if(!newName.isEmpty())
             Util.setText(currButton, newName);
